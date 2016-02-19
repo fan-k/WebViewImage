@@ -14,6 +14,11 @@
 		6AB3B0821C76F81A0003B8B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB3B0811C76F81A0003B8B2 /* Assets.xcassets */; };
 		6AB3B0851C76F81A0003B8B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB3B0831C76F81A0003B8B2 /* LaunchScreen.storyboard */; };
 		6AB3B0901C76F81A0003B8B2 /* WebViewImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3B08F1C76F81A0003B8B2 /* WebViewImageTests.m */; };
+		6AB3B09E1C76F9410003B8B2 /* WebImageZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3B09B1C76F9410003B8B2 /* WebImageZoomScrollView.m */; };
+		6AB3B09F1C76F9410003B8B2 /* WebImgScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3B09D1C76F9410003B8B2 /* WebImgScrollView.m */; };
+		6AB3B0A21C76F9B60003B8B2 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB3B0A11C76F9B60003B8B2 /* UIViewExt.m */; };
+		6AB3B0A41C77020C0003B8B2 /* News_Picture_Save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AB3B0A31C77020C0003B8B2 /* News_Picture_Save@2x.png */; };
+		8EB9ED9B227BFF85E0D28C85 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52CB1FC79F49B751A4C5DC77 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0036B6D98F841B0332094D80 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		52CB1FC79F49B751A4C5DC77 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB3B0721C76F81A0003B8B2 /* WebViewImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB3B0761C76F81A0003B8B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6AB3B0781C76F81A0003B8B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +47,14 @@
 		6AB3B08B1C76F81A0003B8B2 /* WebViewImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB3B08F1C76F81A0003B8B2 /* WebViewImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewImageTests.m; sourceTree = "<group>"; };
 		6AB3B0911C76F81A0003B8B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB3B09A1C76F9410003B8B2 /* WebImageZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImageZoomScrollView.h; sourceTree = "<group>"; };
+		6AB3B09B1C76F9410003B8B2 /* WebImageZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImageZoomScrollView.m; sourceTree = "<group>"; };
+		6AB3B09C1C76F9410003B8B2 /* WebImgScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebImgScrollView.h; sourceTree = "<group>"; };
+		6AB3B09D1C76F9410003B8B2 /* WebImgScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebImgScrollView.m; sourceTree = "<group>"; };
+		6AB3B0A01C76F9B60003B8B2 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		6AB3B0A11C76F9B60003B8B2 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		6AB3B0A31C77020C0003B8B2 /* News_Picture_Save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "News_Picture_Save@2x.png"; sourceTree = "<group>"; };
+		E91434C758E48E2B1B762A20 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB9ED9B227BFF85E0D28C85 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +82,8 @@
 				6AB3B0741C76F81A0003B8B2 /* WebViewImage */,
 				6AB3B08E1C76F81A0003B8B2 /* WebViewImageTests */,
 				6AB3B0731C76F81A0003B8B2 /* Products */,
+				9BA8FAB049163EBFBCFDEC94 /* Pods */,
+				BDD229082A0DEA4C9ED22E27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +103,12 @@
 				6AB3B0791C76F81A0003B8B2 /* AppDelegate.m */,
 				6AB3B07B1C76F81A0003B8B2 /* ViewController.h */,
 				6AB3B07C1C76F81A0003B8B2 /* ViewController.m */,
+				6AB3B0A01C76F9B60003B8B2 /* UIViewExt.h */,
+				6AB3B0A11C76F9B60003B8B2 /* UIViewExt.m */,
+				6AB3B09A1C76F9410003B8B2 /* WebImageZoomScrollView.h */,
+				6AB3B09B1C76F9410003B8B2 /* WebImageZoomScrollView.m */,
+				6AB3B09C1C76F9410003B8B2 /* WebImgScrollView.h */,
+				6AB3B09D1C76F9410003B8B2 /* WebImgScrollView.m */,
 				6AB3B07E1C76F81A0003B8B2 /* Main.storyboard */,
 				6AB3B0811C76F81A0003B8B2 /* Assets.xcassets */,
 				6AB3B0831C76F81A0003B8B2 /* LaunchScreen.storyboard */,
@@ -97,6 +121,7 @@
 		6AB3B0751C76F81A0003B8B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6AB3B0A31C77020C0003B8B2 /* News_Picture_Save@2x.png */,
 				6AB3B0761C76F81A0003B8B2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -111,6 +136,23 @@
 			path = WebViewImageTests;
 			sourceTree = "<group>";
 		};
+		9BA8FAB049163EBFBCFDEC94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0036B6D98F841B0332094D80 /* Pods.debug.xcconfig */,
+				E91434C758E48E2B1B762A20 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDD229082A0DEA4C9ED22E27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52CB1FC79F49B751A4C5DC77 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AB3B0941C76F81A0003B8B2 /* Build configuration list for PBXNativeTarget "WebViewImage" */;
 			buildPhases = (
+				733F158B3A95C4F77094FF36 /* Check Pods Manifest.lock */,
 				6AB3B06E1C76F81A0003B8B2 /* Sources */,
 				6AB3B06F1C76F81A0003B8B2 /* Frameworks */,
 				6AB3B0701C76F81A0003B8B2 /* Resources */,
+				7CB16783AD2EEA33F109319D /* Embed Pods Frameworks */,
+				1B678173F1BB2AF4CB923C1B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +205,7 @@
 				TargetAttributes = {
 					6AB3B0711C76F81A0003B8B2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = L23AN4MA3N;
 					};
 					6AB3B08A1C76F81A0003B8B2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -194,6 +240,7 @@
 				6AB3B0851C76F81A0003B8B2 /* LaunchScreen.storyboard in Resources */,
 				6AB3B0821C76F81A0003B8B2 /* Assets.xcassets in Resources */,
 				6AB3B0801C76F81A0003B8B2 /* Main.storyboard in Resources */,
+				6AB3B0A41C77020C0003B8B2 /* News_Picture_Save@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +253,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B678173F1BB2AF4CB923C1B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		733F158B3A95C4F77094FF36 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CB16783AD2EEA33F109319D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6AB3B06E1C76F81A0003B8B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -213,7 +308,10 @@
 			files = (
 				6AB3B07D1C76F81A0003B8B2 /* ViewController.m in Sources */,
 				6AB3B07A1C76F81A0003B8B2 /* AppDelegate.m in Sources */,
+				6AB3B09F1C76F9410003B8B2 /* WebImgScrollView.m in Sources */,
 				6AB3B0771C76F81A0003B8B2 /* main.m in Sources */,
+				6AB3B0A21C76F9B60003B8B2 /* UIViewExt.m in Sources */,
+				6AB3B09E1C76F9410003B8B2 /* WebImageZoomScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +435,10 @@
 		};
 		6AB3B0951C76F81A0003B8B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0036B6D98F841B0332094D80 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WebViewImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyProgramName.WebViewImage;
@@ -348,8 +448,10 @@
 		};
 		6AB3B0961C76F81A0003B8B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91434C758E48E2B1B762A20 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WebViewImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MyProgramName.WebViewImage;
@@ -400,6 +502,7 @@
 				6AB3B0961C76F81A0003B8B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AB3B0971C76F81A0003B8B2 /* Build configuration list for PBXNativeTarget "WebViewImageTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +511,7 @@
 				6AB3B0991C76F81A0003B8B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
