@@ -27,6 +27,7 @@
 {
     NSString *str = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%'";
     [webView stringByEvaluatingJavaScriptFromString:str];
+    //
     
     //js方法遍历图片添加点击事件 返回所有图片
     static  NSString * const jsGetImages =
@@ -56,6 +57,10 @@
         str = [str stringByReplacingOccurrencesOfString:@"myweb:imageClick:"
                                              withString:@""];
         NSArray * imageUrlArr = [str  componentsSeparatedByString:@","];
+        for (NSString * url in imageUrlArr) {
+              NSLog(@"%@",url);
+        }
+      
         [WebImgScrollView showImageWithImageArr:imageUrlArr];
         
     }
