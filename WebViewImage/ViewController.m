@@ -23,6 +23,7 @@
    webView.delegate =self;
     // Do any additional setup after loading the view, typically from a nib.
 }
+
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSString *str = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%'";
@@ -55,7 +56,9 @@
     if ([str hasPrefix:@"myweb:imageClick:"]) {
         str = [str stringByReplacingOccurrencesOfString:@"myweb:imageClick:"
                                              withString:@""];
+
         NSLog(@"str");
+
         NSArray * imageUrlArr = [str  componentsSeparatedByString:@","];
         [WebImgScrollView showImageWithImageArr:imageUrlArr];
         
@@ -63,6 +66,7 @@
     
     return YES;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
