@@ -55,6 +55,7 @@
     if ([str hasPrefix:@"myweb:imageClick:"]) {
         str = [str stringByReplacingOccurrencesOfString:@"myweb:imageClick:"
                                              withString:@""];
+        NSLog(@"str");
         NSArray * imageUrlArr = [str  componentsSeparatedByString:@","];
         [WebImgScrollView showImageWithImageArr:imageUrlArr];
         
