@@ -43,9 +43,14 @@
     
     [[UIApplication sharedApplication].keyWindow addSubview:imgSV];
     
+    imgSV.imgUrl = [urlArr lastObject];
     
+    NSMutableArray * arr =[NSMutableArray array];
+    for (int i =0; i <urlArr.count-1; i++) {
+        [arr addObject:urlArr[i]];
+    }
     
-    imgSV.imgUrlArr = urlArr;
+    imgSV.imgUrlArr = arr;
     
     return imgSV;
 }
@@ -61,7 +66,7 @@
     
   
     [self addSubview:self.downLoadBtn];
-    
+        [self addSubview:self.countLabel];
   
 }
 
@@ -79,16 +84,30 @@
 
 - (void)image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo{
     
+    
+    
     MBProgressHUD*  HUD = [[MBProgressHUD alloc] initWithView:[UIApplication sharedApplication].keyWindow];
     [[UIApplication sharedApplication].keyWindow addSubview:HUD];
-    HUD.labelText = @"已保存至相册";
+    
+    // Set the custom view mode to show any view.
+    HUD.mode = MBProgressHUDModeCustomView;
+    // Set an image view with a checkmark.
+    UIImage *image1 = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    HUD.customView = [[UIImageView alloc] initWithImage:image1];
+    // Looks a bit nicer if we make it square.
+    HUD.square = YES;
+    // Optional label text.
+    HUD.labelText = NSLocalizedString(@"已保存至相册", @"HUD done title");
     [HUD show:YES];
     [HUD hide:YES afterDelay:2];
-  
+    
+    
+    
 }
 //停止滚动
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     int page = (int)scrollView.contentOffset.x/kScreenWidth;
+    _countLabel.text =[NSString stringWithFormat:@"%d/%lu",page+1,(unsigned long)_imgUrlArr.count];
     
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     
@@ -96,10 +115,9 @@
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
         self.image = image;
-      
+        
     }];
 }
-
 #pragma mark - setter and getter
 -(void)setImgUrl:(NSString *)imgUrl
 {
@@ -115,7 +133,7 @@
         CGRect frame = self.scrollView.frame;
         frame.origin.x = frame.size.width * i;
         frame.origin.y = 0;
-
+        
         WebImageZoomScrollView * imageScrollView = [[WebImageZoomScrollView alloc] initWithFrame:frame];
         imageScrollView.imgUrl= imgUrlArr[i];
         imageScrollView.RemoveView = ^{
@@ -126,9 +144,12 @@
     }
     if (_imgUrl) {
         NSUInteger  index =  [_imgUrlArr indexOfObject:_imgUrl];
-        [self.scrollView setContentOffset:CGPointMake(kScreenWidth* index, kScreenHeight - 40)];
+        [self.scrollView setContentOffset:CGPointMake(kScreenWidth* index, 0)];
+        _countLabel.text =[NSString stringWithFormat:@"%lu/%lu",(unsigned long)index+1,(unsigned long)_imgUrlArr.count];
     }
-  
+    
+    
+    
 }
 
 
@@ -158,6 +179,15 @@
     }
     return _downLoadBtn;
 }
-
+-(UILabel *)countLabel
+{
+    if (!_countLabel) {
+        _countLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, kScreenHeight-40, 60, 30)];
+        _countLabel . textColor = [UIColor whiteColor];
+        _countLabel.font = [UIFont systemFontOfSize:15];
+        
+    }
+    return _countLabel;
+}
 
 @end

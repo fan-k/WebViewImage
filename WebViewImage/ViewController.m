@@ -29,6 +29,7 @@
     NSString *str = @"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '100%'";
     [webView stringByEvaluatingJavaScriptFromString:str];
     
+
     //js方法遍历图片添加点击事件 返回所有图片
     static  NSString * const jsGetImages =
     @"function getImages(){\
@@ -39,7 +40,7 @@
     };\
     for(var i=0;i<objs.length;i++){\
     objs[i].onclick=function(){\
-    document.location=\"myweb:imageClick:\"+srcs;\
+    document.location=\"myweb:imageClick:\"+srcs+','+this.src;\
     };\
     };\
     return objs.length;\

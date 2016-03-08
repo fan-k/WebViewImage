@@ -23,6 +23,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 
 
+@property (nonatomic,strong) UILabel * countLabel;
+
 @property (nonatomic, strong) UIButton *downLoadBtn;
 
 + (WebImgScrollView *)showImageWithImageArr:(NSArray *)urlArr;
